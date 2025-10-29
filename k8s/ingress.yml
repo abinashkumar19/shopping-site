@@ -1,3 +1,27 @@
+# -----------------------------------------------
+# LoadBalancer service for NGINX Ingress Controller
+# -----------------------------------------------
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-ingress-lb
+  labels:
+    app: nginx-ingress
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: ingress-nginx
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+    - name: https
+      port: 443
+      targetPort: 443
+---
+# -----------------------------------------------
+# Ingress configuration for shopping site
+# -----------------------------------------------
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -5,9 +29,11 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
 spec:
   rules:
-  - host: shopping.local   # replace with your domain or host
+  - host: shopping.local   # change to your domain or use /etc/hosts
     http:
       paths:
       - path: /
