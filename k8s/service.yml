@@ -1,3 +1,6 @@
+# ----------------------------------------------------------
+# 🏠 INDEX SERVICE
+# ----------------------------------------------------------
 apiVersion: v1
 kind: Service
 metadata:
@@ -5,15 +8,17 @@ metadata:
   labels:
     app: shopping-index
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: shopping-index
   ports:
-  - port: 80
-    targetPort: 80
-
+    - name: http
+      port: 80
+      targetPort: 80
 ---
-
+# ----------------------------------------------------------
+# 📱 PHONES SERVICE
+# ----------------------------------------------------------
 apiVersion: v1
 kind: Service
 metadata:
@@ -21,15 +26,17 @@ metadata:
   labels:
     app: shopping-phones
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: shopping-phones
   ports:
-  - port: 80
-    targetPort: 80
-
+    - name: http
+      port: 80
+      targetPort: 80
 ---
-
+# ----------------------------------------------------------
+# 👗 CLOTHES SERVICE
+# ----------------------------------------------------------
 apiVersion: v1
 kind: Service
 metadata:
@@ -37,15 +44,17 @@ metadata:
   labels:
     app: shopping-clothes
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: shopping-clothes
   ports:
-  - port: 80
-    targetPort: 80
-
+    - name: http
+      port: 80
+      targetPort: 80
 ---
-
+# ----------------------------------------------------------
+# 💻 LAPTOPS SERVICE
+# ----------------------------------------------------------
 apiVersion: v1
 kind: Service
 metadata:
@@ -53,9 +62,10 @@ metadata:
   labels:
     app: shopping-laptops
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: shopping-laptops
   ports:
-  - port: 80
-    targetPort: 80
+    - name: http
+      port: 80
+      targetPort: 80
