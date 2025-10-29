@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-index-service
+  labels:
+    app: shopping-index
+spec:
+  type: LoadBalancer
+  selector:
+    app: shopping-index
+  ports:
+  - port: 80
+    targetPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-phones-service
+  labels:
+    app: shopping-phones
+spec:
+  type: LoadBalancer
+  selector:
+    app: shopping-phones
+  ports:
+  - port: 80
+    targetPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-clothes-service
+  labels:
+    app: shopping-clothes
+spec:
+  type: LoadBalancer
+  selector:
+    app: shopping-clothes
+  ports:
+  - port: 80
+    targetPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-laptops-service
+  labels:
+    app: shopping-laptops
+spec:
+  type: LoadBalancer
+  selector:
+    app: shopping-laptops
+  ports:
+  - port: 80
+    targetPort: 80
