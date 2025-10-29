@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopping-index
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shopping-index
+  template:
+    metadata:
+      labels:
+        app: shopping-index
+    spec:
+      containers:
+      - name: shopping-index
+        image: shopping-index:latest
+        ports:
+        - containerPort: 80
