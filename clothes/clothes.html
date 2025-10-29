@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothes | ShopSmart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(120deg, #ffe4e6, #fbcfe8, #e0f2fe);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
+    }
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .card {
+      transition: all 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body class="text-gray-800 min-h-screen font-sans">
+
+  <nav class="flex justify-between items-center px-8 py-4 bg-white/80 backdrop-blur-lg shadow-md sticky top-0">
+    <h1 class="text-2xl font-bold text-rose-500">👗 ShopSmart Fashion</h1>
+    <a href="index.html" class="text-sm text-rose-500 hover:underline">← Back to Home</a>
+  </nav>
+
+  <section class="text-center mt-12">
+    <h2 class="text-5xl font-bold text-rose-600 mb-3">Elegant Trends 2025</h2>
+    <p class="text-rose-400 mb-10">Feel confident, look stunning, own your style.</p>
+  </section>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
+    <div class="bg-white/70 rounded-3xl p-6 text-center card">
+      <img src="https://images-cdn.ubuy.co.in/659bb8a46095404cf00f84f2-wjhwsx-t-shirt-men-shirt-for-men-simple.jpg" class="w-24 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-rose-600">Men’s Casual T-Shirt</h3>
+      <p class="text-gray-700 mt-2">₹799 • Cotton Comfort</p>
+      <button class="mt-4 px-5 py-2 bg-rose-500 text-white rounded-full hover:bg-rose-600 transition">Add to Cart</button>
+    </div>
+
+    <div class="bg-white/70 rounded-3xl p-6 text-center card">
+      <img src="https://images.squarespace-cdn.com/content/v1/57cde248f5e231f790849522/1592799272642-YRP074VQT33TUVWWNI7L/LOVE%20SHACK%20FANCY%20x%20Target%20Dress" class="w-24 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-rose-600">Women’s Summer Dress</h3>
+      <p class="text-gray-700 mt-2">₹1,299 • Floral Print</p>
+      <button class="mt-4 px-5 py-2 bg-rose-500 text-white rounded-full hover:bg-rose-600 transition">Add to Cart</button>
+    </div>
+
+    <div class="bg-white/70 rounded-3xl p-6 text-center card">
+      <img src="https://www.globalrepublic.in/cdn/shop/files/1_17eb7cf2-73f3-4343-95bd-0f0633900ead.jpg?v=1761421588&width=1080" class="w-24 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-rose-600">Women’s Leather Jacket</h3>
+      <p class="text-gray-700 mt-2">₹2,499 • Premium Quality</p>
+      <button class="mt-4 px-5 py-2 bg-rose-500 text-white rounded-full hover:bg-rose-600 transition">Add to Cart</button>
+    </div>
+<div class="bg-white/70 rounded-3xl p-6 text-center card">
+      <img src="https://assets.myntassets.com/w_412,q_30,dpr_3,fl_progressive,f_webp/assets/images/12554498/2022/4/28/a3e42528-019c-4bf9-a5bc-30cb76c747211651116245680-MANQ-Men-Blue-Slim-Fit-Solid-Single-Breasted-Formal-Blazer-6-1.jpg" class="w-24 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-rose-600">  Men's Blazers</h3>
+      <p class="text-gray-700 mt-2">₹2,000 • Men's Blazers </p>
+      <button class="mt-4 px-5 py-2 bg-rose-500 text-white rounded-full hover:bg-rose-600 transition">Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>
