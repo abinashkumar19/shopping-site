@@ -1,9 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shopping-index-deployment
-  labels:
-    app: shopping-index
+  name: shopping-index
 spec:
   replicas: 1
   selector:
@@ -16,13 +14,18 @@ spec:
     spec:
       containers:
       - name: shopping-index
-        image: shopping-index:latest   # Replace with DockerHub image if needed
+        image: 530438453112.dkr.ecr.eu-west-2.amazonaws.com/index:latest
         ports:
         - containerPort: 80
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
-          limits:
-            cpu: "300m"
-            memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-index-service
+spec:
+  type: ClusterIP
+  selector:
+    app: shopping-index
+  ports:
+  - port: 80
+    targetPort: 80
