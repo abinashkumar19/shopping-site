@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phones | ShopSmart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .neon-border {
+      box-shadow: 0 0 20px #3b82f6, 0 0 30px #2563eb inset;
+    }
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 15px #3b82f6; }
+      50% { box-shadow: 0 0 30px #60a5fa; }
+    }
+    .glow-animate { animation: glow 2s infinite; }
+  </style>
+</head>
+<body class="text-white min-h-screen font-sans">
+
+  <nav class="glass flex justify-between items-center px-8 py-4 sticky top-0 z-50">
+    <h1 class="text-2xl font-bold text-blue-400">⚡ ShopSmart Phones</h1>
+    <a href="index.html" class="text-sm text-blue-300 hover:underline">← Back to Home</a>
+  </nav>
+
+  <section class="text-center mt-12">
+    <h2 class="text-5xl font-bold text-blue-400 mb-3 glow-animate">Top Smartphones 2025</h2>
+    <p class="text-gray-400 mb-10">Futuristic design. Lightning performance. Absolute power.</p>
+  </section>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
+    <div class="glass rounded-3xl p-6 text-center hover:scale-105 transition-transform neon-border">
+      <img src="https://www.mobileana.com/wp-content/uploads/2025/06/Apple-iPhone-17-Pro-Max-Cosmic-Orange.webp" class="w-24 mx-auto mb-4 drop-shadow-lg">
+      <h3 class="text-xl font-semibold text-blue-400">iPhone 17 Pro Max</h3>
+      <p class="text-gray-300 mt-2">₹1,49,999 • 256GB • Titanium</p>
+      <button class="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold text-white">Buy Now</button>
+    </div>
+
+    <div class="glass rounded-3xl p-6 text-center hover:scale-105 transition-transform neon-border">
+      <img src="https://alltech.pk/wp-content/uploads/2024/04/3.jpg" class="w-24 mx-auto mb-4 drop-shadow-lg">
+      <h3 class="text-xl font-semibold text-blue-400">Samsung S24 Ultra</h3>
+      <p class="text-gray-300 mt-2">₹1,29,999 • 200MP • S Pen</p>
+      <button class="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold text-white">Buy Now</button>
+    </div>
+
+    <div class="glass rounded-3xl p-6 text-center hover:scale-105 transition-transform neon-border">
+      <img src="https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2024/06/7e1d3e44b5f69e9d6a73a122353a4988.jpeg?size=*:900" class="w-24 mx-auto mb-4 drop-shadow-lg">
+      <h3 class="text-xl font-semibold text-blue-400">OnePlus 13 Pro</h3>
+      <p class="text-gray-300 mt-2">₹69,999 • Snapdragon 8 Gen 3</p>
+      <button class="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold text-white">Buy Now</button>
+    </div>
+
+ <div class="glass rounded-3xl p-6 text-center hover:scale-105 transition-transform neon-border">
+      <img src="https://lh3.googleusercontent.com/IqS-ICOkCWbfOYHgOkVfad7ARD89JnxFZx-u-5iYVZiR0aBDXJr6ZlssX8pe8xqEMRMDkH-rxOgom2OobH14E8QFDrh5E9l82QIkIg=rw-e365-w842-v1" class="w-24 mx-auto mb-4 drop-shadow-lg">
+      <h3 class="text-xl font-semibold text-blue-400">Google pixel 10 pro</h3>
+      <p class="text-gray-300 mt-2">₹70,869 • Snapdragon 8 Gen 3</p>
+      <button class="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold text-white">Buy Now</button>
+    </div>
+
+  </div>
+</body>
+</html>
