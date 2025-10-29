@@ -1,9 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shopping-phones-deployment
-  labels:
-    app: shopping-phones
+  name: shopping-phones
 spec:
   replicas: 1
   selector:
@@ -16,13 +14,18 @@ spec:
     spec:
       containers:
       - name: shopping-phones
-        image: shopping-phones:latest
+        image: 530438453112.dkr.ecr.eu-west-2.amazonaws.com/phones:latest
         ports:
         - containerPort: 80
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
-          limits:
-            cpu: "300m"
-            memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopping-phones-service
+spec:
+  type: ClusterIP
+  selector:
+    app: shopping-phones
+  ports:
+  - port: 80
+    targetPort: 80
