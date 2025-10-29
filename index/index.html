@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopSmart | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+    .float {animation: float 3s ease-in-out infinite;}
+  </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white min-h-screen">
+
+  <nav class="flex justify-between items-center px-10 py-4 bg-white/10 backdrop-blur-md">
+    <h1 class="text-2xl font-bold">🛍️ ShopSmart</h1>
+    <div class="space-x-6 font-semibold">
+      <a href="index.html" class="underline">Home</a>
+      <a href="phones.html">Phones</a>
+      <a href="clothes.html">Clothes</a>
+      <a href="laptops.html">Laptops</a>
+    </div>
+  </nav>
+
+  <section class="text-center mt-20">
+    <h2 class="text-5xl font-extrabold mb-4 tracking-wide">Discover the Future of Shopping</h2>
+    <p class="text-lg text-white/90 mb-8">Shop smarter with the latest gadgets, fashion, and tech deals.</p>
+    <a href="#categories" class="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-100 transition">Explore Categories</a>
+  </section>
+
+  <section id="categories" class="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-10 px-10 text-gray-900">
+    <a href="phones.html" class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition text-center float">
+      <img src="https://png.pngtree.com/png-vector/20240531/ourmid/pngtree-touch-screen-phone-vector-icon-flat-design-round-background-png-image_12570231.png" class="w-20 mx-auto mb-4">
+      <h3 class="text-xl font-semibold">Phones</h3>
+    </a>
+
+    <a href="clothes.html" class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition text-center float delay-100">
+      <img src="https://www.clipartmax.com/png/middle/0-6367_cartoon-clothes-rack-pnf.png" class="w-20 mx-auto mb-4">
+      <h3 class="text-xl font-semibold">Clothes</h3>
+    </a>
+
+    <a href="laptops.html" class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition text-center float delay-200">
+      <img src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-chromebook-clipart-cartoon-laptop-with-a-purple-keyboard-vector-png-image_6805871.png" class="w-20 mx-auto mb-4">
+      <h3 class="text-xl font-semibold">Laptops</h3>
+    </a>
+  </section>
+
+</body>
+</html>
