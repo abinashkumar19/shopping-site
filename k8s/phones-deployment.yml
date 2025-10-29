@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopping-phones-deployment
+  labels:
+    app: shopping-phones
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shopping-phones
+  template:
+    metadata:
+      labels:
+        app: shopping-phones
+    spec:
+      containers:
+      - name: shopping-phones
+        image: shopping-phones:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "300m"
+            memory: "256Mi"
