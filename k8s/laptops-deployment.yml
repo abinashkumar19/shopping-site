@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopping-laptops-deployment
+  labels:
+    app: shopping-laptops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shopping-laptops
+  template:
+    metadata:
+      labels:
+        app: shopping-laptops
+    spec:
+      containers:
+      - name: shopping-laptops
+        image: shopping-laptops:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "300m"
+            memory: "256Mi"
